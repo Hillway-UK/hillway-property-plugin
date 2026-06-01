@@ -1,54 +1,19 @@
 {
   "mcpServers": {
-    "hillway-voa": {
+    "hillway-property": {
       "type": "http",
-      "url": "https://mcp.hillwayco.uk/voa",
-      "description": "Valuation Office Agency data: rateable values, floor areas, market rent benchmarks, hereditament references"
-    },
-    "hillway-hmlr": {
-      "type": "http",
-      "url": "https://mcp.hillwayco.uk/hmlr",
-      "description": "HM Land Registry: title indexes, registered proprietor lookups, CCOD/OCOD overseas ownership, title plans"
-    },
-    "hillway-epc": {
-      "type": "http",
-      "url": "https://mcp.hillwayco.uk/epc",
-      "description": "EPC Open Data: domestic and non-domestic energy performance certificates"
-    },
-    "hillway-flood": {
-      "type": "http",
-      "url": "https://mcp.hillwayco.uk/flood",
-      "description": "Environment Agency flood risk: zone 2, zone 3, surface water, river, sea"
-    },
-    "hillway-planning": {
-      "type": "http",
-      "url": "https://mcp.hillwayco.uk/planning",
-      "description": "Planning applications, decisions, appeals across UK local authorities via planning.data.gov.uk + PlanIt"
-    },
-    "hillway-heritage": {
-      "type": "http",
-      "url": "https://mcp.hillwayco.uk/heritage",
-      "description": "Historic England: conservation areas, listed buildings, scheduled monuments, world heritage sites"
-    },
-    "hillway-companies-house": {
-      "type": "http",
-      "url": "https://mcp.hillwayco.uk/companies-house",
-      "description": "Companies House: tenant covenant assessment, ownership lookups, director changes, charges, strike-off alerts"
+      "url": "https://mcp.hillwayco.uk/mcp",
+      "description": "Hillway Property data tools: VOA rateable values and floor areas, EPC energy ratings, rent and price-per-sqft benchmarks, with more datasets (HMLR, flood, planning, heritage) added over time. Reads Hillway's cached datasets first, so lookups survive government API outages."
     },
     "ms365": {
       "type": "http",
       "url": "https://microsoft365.mcp.claude.com/mcp",
-      "description": "Microsoft 365: OneDrive for lease document ingestion, Outlook for compliance certificate sweeps, Excel for tenancy schedules"
+      "description": "Microsoft 365: OneDrive for lease document ingestion, Outlook for compliance certificate sweeps, Excel for tenancy schedules. Optional."
     },
     "slack": {
       "type": "http",
       "url": "https://mcp.slack.com/mcp",
-      "description": "Slack: client comms, AI-to-AI handoff, compliance reminder posts"
-    },
-    "xero": {
-      "type": "http",
-      "url": "https://mcp.hillwayco.uk/xero",
-      "description": "Xero: rent invoicing, service charge accounting, cash-in reconciliation, tracking categories per property"
+      "description": "Slack: client comms, AI-to-AI handoff, compliance reminder posts. Optional."
     }
   }
 }
