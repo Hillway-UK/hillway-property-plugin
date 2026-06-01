@@ -10,12 +10,30 @@ Produce a comprehensive UK property intelligence report.
 ## Usage
 
 ```
-/property-report 35 Moorgate, Rotherham S60 2AG
 /property-report S60 2AG
 /property-report Stewart House, Moorgate Road, Rotherham
 ```
 
 ## What it does
+
+Call the `property_report` tool with the postcode. It fans out across every
+Hillway data source in one call and returns a structured pack:
+
+- VOA rating and floor area, plus a rateable-value benchmark
+- EPC energy bands (cache-first, outage-proof)
+- Combined VOA + EPC snapshot (floor area + band per property)
+- HM Land Registry ownership (who owns what)
+- Planning applications nearby
+- Heritage: listed buildings and conservation areas
+- Flood risk (Environment Agency zones)
+
+Then synthesise the result into a clear written report. Lead with the headline
+property facts, then ownership, then constraints (planning, heritage, flood).
+Flag anything needing human verification before external reliance, per the RICS
+AI Practice Statement.
+
+If you need only part of the picture, call the specific tool instead (see the
+property-data skill table). Legacy detail on the underlying data sources:
 
 1. **Geocode** the input via OS / postcodes.io
 2. **Fan-out in parallel** across 7+ data sources:

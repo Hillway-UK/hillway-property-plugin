@@ -27,15 +27,28 @@ Auto-trigger when the user mentions:
 
 ## Tools to use
 
-| Need                                           | Tool                                 |
-| ---------------------------------------------- | ------------------------------------ |
-| Rateable value, floor area for a postcode      | `voa_by_postcode`                    |
-| Rateable value, floor area for a street        | `voa_by_street`                      |
-| Rent and price-per-sqft benchmark for a sector | `voa_benchmark_postcode`             |
-| EPC energy rating for a postcode               | `epc_search_postcode`                |
-| EPC for a specific building                    | `epc_search_address`                 |
-| EPC across both registers                      | `epc_lookup_both_registers`          |
-| Tenant covenant, company ownership             | Companies House tools (if connected) |
+| Need                                                    | Tool                                 |
+| ------------------------------------------------------- | ------------------------------------ |
+| Full intelligence pack for a postcode (best first call) | `property_report`                    |
+| Floor area + rateable value + EPC band combined         | `property_snapshot`                  |
+| Rateable value, floor area for a postcode               | `voa_by_postcode`                    |
+| Rateable value, floor area for a street                 | `voa_by_street`                      |
+| Rent and price-per-sqft benchmark for a sector          | `voa_benchmark_postcode`             |
+| EPC energy band for a postcode                          | `epc_search_postcode`                |
+| EPC for a specific building                             | `epc_search_address`                 |
+| EPC across both registers                               | `epc_lookup_both_registers`          |
+| Who owns commercial property in a postcode              | `ownership_by_postcode`              |
+| Every title a company or person owns                    | `ownership_by_proprietor`            |
+| Titles by Companies House number                        | `ownership_by_company_number`        |
+| Planning applications near a postcode                   | `planning_by_postcode`               |
+| Listed buildings and conservation areas                 | `heritage_by_postcode`               |
+| Flood risk (Environment Agency zones)                   | `flood_by_postcode`                  |
+| Poor-EPC commercial leads in a council area             | `epc_leads`                          |
+| Tenant covenant                                         | Companies House tools (if connected) |
+
+For a complete overview of a property or postcode, call `property_report` first.
+It fans out across rating, EPC, ownership, planning, heritage and flood in one
+call.
 
 Each VOA result includes rateable value, floor area in sqm and sqft, use
 description and an accommodation breakdown. The `voa_benchmark_postcode` tool
