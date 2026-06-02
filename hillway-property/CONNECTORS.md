@@ -2,21 +2,29 @@
 
 This document explains the MCP servers the Hillway Property plugin uses and how to connect them.
 
-## Hillway-hosted MCPs (no setup needed)
+## Hillway Property MCP (one connector, free to start)
 
-These run on Hillway infrastructure and are free to call for any user of the plugin. No credentials required from you.
+One Hillway-hosted endpoint serves all 18 property tools (VOA, EPC, HM Land
+Registry ownership and sales transactions, planning, heritage, flood, Companies
+House covenant and officers, plus the combined report and leads finder):
 
-| MCP                     | Endpoint                                   | Data source                   | Rate limit |
-| ----------------------- | ------------------------------------------ | ----------------------------- | ---------- |
-| hillway-voa             | `https://mcp.hillwayco.uk/voa`             | VOA Rating List               | 60 req/min |
-| hillway-hmlr            | `https://mcp.hillwayco.uk/hmlr`            | HM Land Registry              | 30 req/min |
-| hillway-epc             | `https://mcp.hillwayco.uk/epc`             | Open Data Communities (DLUHC) | 60 req/min |
-| hillway-flood           | `https://mcp.hillwayco.uk/flood`           | Environment Agency ArcGIS     | 60 req/min |
-| hillway-planning        | `https://mcp.hillwayco.uk/planning`        | planning.data.gov.uk + PlanIt | 60 req/min |
-| hillway-heritage        | `https://mcp.hillwayco.uk/heritage`        | Historic England + Cadw + HES | 60 req/min |
-| hillway-companies-house | `https://mcp.hillwayco.uk/companies-house` | Companies House live API      | 60 req/min |
+| MCP              | Endpoint                       | Data sources                                               |
+| ---------------- | ------------------------------ | ---------------------------------------------------------- |
+| hillway-property | `https://mcp.hillwayco.uk/mcp` | VOA, EPC, HMLR, planning, heritage, flood, Companies House |
 
-For higher-rate usage, contact matt@hillwayco.uk to discuss commercial terms.
+### Sign in to connect
+
+When you connect, Claude takes you to Hillway to sign in (a one-time email link,
+no password). Sign-in is what unlocks the connector and takes a few seconds.
+
+| Tier | Price   | What you get                                                                                 |
+| ---- | ------- | -------------------------------------------------------------------------------------------- |
+| Free | £0      | Rating, floor area, EPC, ownership, planning, heritage, flood and a headline property report |
+| Pro  | £49/mo  | Adds sales comparables, RV benchmarks, covenant and director due diligence, full report      |
+| Firm | £199/mo | Adds the EPC leads engine and bulk, uncapped                                                 |
+
+See [hillwayco.uk/property/pricing](https://hillwayco.uk/property/pricing). For
+firm-wide or API terms, contact matt@hillwayco.uk.
 
 ## Optional connectors (your credentials)
 
