@@ -45,6 +45,7 @@ Auto-trigger when the user mentions:
 | Flood risk (Environment Agency zones)                   | `flood_by_postcode`           |
 | Poor-EPC commercial leads in a council area             | `epc_leads`                   |
 | Tenant or owner covenant (Companies House)              | `covenant_check`              |
+| Directors and persons with significant control (PSC)    | `company_officers`            |
 | Sold prices and dates (sales comparable evidence)       | `transactions_by_postcode`    |
 
 For a complete overview of a property or postcode, call `property_report` first.
