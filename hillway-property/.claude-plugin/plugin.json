@@ -1,6 +1,6 @@
 {
   "name": "hillway-property",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "UK commercial property toolkit for chartered surveyors and property managers. Property intelligence reports, lease abstraction, rent review analysis, service charge management, and RICS standards reference. Pulls live data from VOA, HMLR, EPC, Companies House, Environment Agency, planning portals and Historic England.",
   "author": {
     "name": "Hillway Holdings Limited",
